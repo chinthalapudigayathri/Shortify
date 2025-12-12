@@ -26,7 +26,9 @@ public interface URLShortnerRepo extends JpaRepository<URLShortner, Long> {
      * And we pass fiends declared in Model(entity) class into these methods to say what cloumn it is
      */
 
-    URLShortner findByShortURL(String shorturl);
-    URLShortner findByLongURL(String longurl);
+    URLShortner findByShorturl(String shorturl);
+    URLShortner findByLongurl(String longurl);
+    boolean existsByShorturl(String shorturl);
+    boolean existsByLongurl(String longurl);
 
 }

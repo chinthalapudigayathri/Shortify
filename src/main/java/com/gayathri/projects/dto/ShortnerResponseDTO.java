@@ -9,7 +9,7 @@ import java.time.OffsetDateTime;
 @Data
 @Builder
 @AllArgsConstructor
-class ShortnerResponseDTO
+public class ShortnerResponseDTO
 {
     /* here we give all fields as in entity layer */
     private Long id;

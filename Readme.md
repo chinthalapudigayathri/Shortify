@@ -15,3 +15,14 @@ Inspired by: https://github.com/prashanthm07/url-shortner-java-springboot-postgr
 13. And then we create Data Transfer Object layer(DTO) to pass data objects from one layer to other layer
 14. Here names of fields can be different from Entity and Repository layer as this is not directly interacting with DB
 15. we can connect these columns seperately with @Mapper while mapping
+16. Redis is used to caching and temporary and fast data access, we create a Redis service layer to interact with db
+17. Client -> Springboot -> Redis -> DB
+18. If we do not assign any access modifier for a class then it is called default access. Default access is package private which means only classes in that same package can access that class
+19. Every method in an interface is an abstract method by default unless specifically defined with access modifiers
+20. A class always implements an interface
+21. All methods in an interface are by default abstract methods unless specifically declared as public etc
+22. @Autowired - Spring scans to all the beans based on its component once it sees @autowired , it tells spring to inject Spring data JPA instances there
+23. @Override tells spring that this method is meant to override a method from superclass
+24. @Cacheable tells spring that result of this method call should be cached
+25. A custom Exception class always extends RuntimeException class 
+26. Your repository method names must match the Java field names in the entity
