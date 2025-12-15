@@ -2231,3 +2231,167 @@ org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property o
 2025-12-15T18:13:27.416+05:30  INFO 18456 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-12-15T18:13:27.416+05:30  INFO 18456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-12-15T18:13:27.417+05:30  INFO 18456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-15T19:07:15.328+05:30  WARN 18456 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m6s543ms773µs).
+2025-12-15T20:12:56.300+05:30  INFO 28092 --- [main] com.gayathri.projects.ShortifyTest       : Starting ShortifyTest using Java 21.0.9 with PID 28092 (started by Gayathri in C:\Users\Gayathri\Projects\Shortify)
+2025-12-15T20:12:56.301+05:30  INFO 28092 --- [main] com.gayathri.projects.ShortifyTest       : No active profile set, falling back to 1 default profile: "default"
+2025-12-15T20:12:57.227+05:30  INFO 28092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-15T20:12:57.229+05:30  INFO 28092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-15T20:12:57.407+05:30  INFO 28092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 167 ms. Found 1 JPA repository interface.
+2025-12-15T20:12:57.434+05:30  INFO 28092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-15T20:12:57.435+05:30  INFO 28092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-15T20:12:57.454+05:30  INFO 28092 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gayathri.projects.repository.URLShortnerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-15T20:12:57.455+05:30  INFO 28092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-12-15T20:12:58.086+05:30  INFO 28092 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-15T20:12:58.180+05:30  INFO 28092 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-12-15T20:12:58.225+05:30  INFO 28092 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-15T20:12:58.365+05:30  INFO 28092 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-15T20:12:58.397+05:30  INFO 28092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-15T20:12:58.702+05:30  INFO 28092 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1c66cd02
+2025-12-15T20:12:58.704+05:30  INFO 28092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-15T20:12:58.794+05:30  WARN 28092 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-15T20:12:58.824+05:30  INFO 28092 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.11
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-15T20:12:59.918+05:30  INFO 28092 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-15T20:13:00.056+05:30  INFO 28092 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15T20:13:01.972+05:30 DEBUG 28092 --- [main] o.s.d.r.l.RedisMessageListenerContainer  : Starting RedisMessageListenerContainer...
+2025-12-15T20:13:01.974+05:30 DEBUG 28092 --- [main] o.s.d.r.l.RedisMessageListenerContainer  : Postpone listening for Redis messages until actual listeners are added
+2025-12-15T20:13:01.984+05:30  INFO 28092 --- [main] com.gayathri.projects.ShortifyTest       : Started ShortifyTest in 6.025 seconds (process running for 8.907)
+2025-12-15T20:13:02.074+05:30 DEBUG 28092 --- [SpringApplicationShutdownHook] o.s.d.r.l.RedisMessageListenerContainer  : Stopped RedisMessageListenerContainer
+2025-12-15T20:13:02.106+05:30  INFO 28092 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15T20:13:02.108+05:30  INFO 28092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-15T20:13:02.116+05:30  INFO 28092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-15T20:19:10.251+05:30  INFO 12396 --- [main] com.gayathri.projects.ShortifyTest       : Starting ShortifyTest using Java 21.0.9 with PID 12396 (started by Gayathri in C:\Users\Gayathri\Projects\Shortify)
+2025-12-15T20:19:10.255+05:30  INFO 12396 --- [main] com.gayathri.projects.ShortifyTest       : No active profile set, falling back to 1 default profile: "default"
+2025-12-15T20:19:12.441+05:30  INFO 12396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-15T20:19:12.445+05:30  INFO 12396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-15T20:19:12.860+05:30  INFO 12396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 389 ms. Found 1 JPA repository interface.
+2025-12-15T20:19:12.909+05:30  INFO 12396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-15T20:19:12.912+05:30  INFO 12396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-15T20:19:12.967+05:30  INFO 12396 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gayathri.projects.repository.URLShortnerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-15T20:19:12.967+05:30  INFO 12396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2025-12-15T20:19:14.362+05:30  INFO 12396 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-15T20:19:14.561+05:30  INFO 12396 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-12-15T20:19:14.682+05:30  INFO 12396 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-15T20:19:15.086+05:30  INFO 12396 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-15T20:19:15.179+05:30  INFO 12396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-15T20:19:15.716+05:30  INFO 12396 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ec156fb
+2025-12-15T20:19:15.719+05:30  INFO 12396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-15T20:19:15.833+05:30  WARN 12396 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-15T20:19:15.879+05:30  INFO 12396 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.11
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-15T20:19:17.864+05:30  INFO 12396 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-15T20:19:18.083+05:30  INFO 12396 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15T20:19:21.956+05:30 DEBUG 12396 --- [main] o.s.d.r.l.RedisMessageListenerContainer  : Starting RedisMessageListenerContainer...
+2025-12-15T20:19:21.959+05:30 DEBUG 12396 --- [main] o.s.d.r.l.RedisMessageListenerContainer  : Postpone listening for Redis messages until actual listeners are added
+2025-12-15T20:19:21.978+05:30  INFO 12396 --- [main] com.gayathri.projects.ShortifyTest       : Started ShortifyTest in 13.059 seconds (process running for 19.645)
+2025-12-15T20:19:22.150+05:30 DEBUG 12396 --- [SpringApplicationShutdownHook] o.s.d.r.l.RedisMessageListenerContainer  : Stopped RedisMessageListenerContainer
+2025-12-15T20:19:22.182+05:30  INFO 12396 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15T20:19:22.185+05:30  INFO 12396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-15T20:19:22.195+05:30  INFO 12396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-15T20:22:23.024+05:30  INFO 20444 --- [main] com.gayathri.projects.Shortify           : Starting Shortify v1.0-SNAPSHOT using Java 21.0.9 with PID 20444 (C:\Users\Gayathri\Projects\Shortify\target\Shortify-1.0-SNAPSHOT.jar started by Gayathri in C:\Users\Gayathri\Projects\Shortify)
+2025-12-15T20:22:23.032+05:30  INFO 20444 --- [main] com.gayathri.projects.Shortify           : No active profile set, falling back to 1 default profile: "default"
+2025-12-15T20:22:25.935+05:30  INFO 20444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-15T20:22:25.940+05:30  INFO 20444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-15T20:22:26.499+05:30  INFO 20444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 526 ms. Found 1 JPA repository interface.
+2025-12-15T20:22:26.564+05:30  INFO 20444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-15T20:22:26.569+05:30  INFO 20444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-15T20:22:26.621+05:30  INFO 20444 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gayathri.projects.repository.URLShortnerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-15T20:22:26.622+05:30  INFO 20444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2025-12-15T20:22:29.044+05:30  INFO 20444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-15T20:22:29.202+05:30  INFO 20444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-15T20:22:29.203+05:30  INFO 20444 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-12-15T20:22:29.338+05:30  INFO 20444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-15T20:22:29.339+05:30  INFO 20444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6061 ms
+2025-12-15T20:22:30.048+05:30  INFO 20444 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-15T20:22:30.246+05:30  INFO 20444 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-12-15T20:22:30.362+05:30  INFO 20444 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-15T20:22:31.568+05:30  INFO 20444 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-15T20:22:31.959+05:30  INFO 20444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-15T20:22:32.789+05:30  INFO 20444 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@204b0f07
+2025-12-15T20:22:32.795+05:30  INFO 20444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-15T20:22:32.957+05:30  WARN 20444 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-15T20:22:33.027+05:30  INFO 20444 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.11
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-15T20:22:35.940+05:30  INFO 20444 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-15T20:22:36.332+05:30  INFO 20444 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15T20:22:42.798+05:30  INFO 20444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-12-15T20:22:42.806+05:30 DEBUG 20444 --- [main] o.s.d.r.l.RedisMessageListenerContainer  : Starting RedisMessageListenerContainer...
+2025-12-15T20:22:42.811+05:30 DEBUG 20444 --- [main] o.s.d.r.l.RedisMessageListenerContainer  : Postpone listening for Redis messages until actual listeners are added
+2025-12-15T20:22:42.861+05:30  INFO 20444 --- [main] com.gayathri.projects.Shortify           : Started Shortify in 22.16 seconds (process running for 24.175)
+2025-12-15T20:29:20.501+05:30  INFO 30884 --- [main] com.gayathri.projects.Shortify           : Starting Shortify v1.0-SNAPSHOT using Java 21.0.9 with PID 30884 (C:\Users\Gayathri\Projects\Shortify\target\Shortify-1.0-SNAPSHOT.jar started by Gayathri in C:\Users\Gayathri\Projects\Shortify)
+2025-12-15T20:29:20.512+05:30  INFO 30884 --- [main] com.gayathri.projects.Shortify           : No active profile set, falling back to 1 default profile: "default"
+2025-12-15T20:29:25.415+05:30  INFO 30884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-15T20:29:25.427+05:30  INFO 30884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-15T20:29:26.384+05:30  INFO 30884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 892 ms. Found 1 JPA repository interface.
+2025-12-15T20:29:26.531+05:30  INFO 30884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-15T20:29:26.540+05:30  INFO 30884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-15T20:29:26.629+05:30  INFO 30884 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gayathri.projects.repository.URLShortnerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-15T20:29:26.632+05:30  INFO 30884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2025-12-15T20:29:30.744+05:30  INFO 30884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-15T20:29:30.904+05:30  INFO 30884 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-15T20:29:30.943+05:30  INFO 30884 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-12-15T20:29:31.257+05:30  INFO 30884 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-15T20:29:31.262+05:30  INFO 30884 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10371 ms
+2025-12-15T20:29:32.817+05:30  INFO 30884 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-15T20:29:33.176+05:30  INFO 30884 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-12-15T20:29:33.367+05:30  INFO 30884 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-15T20:29:35.516+05:30  INFO 30884 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-15T20:29:35.701+05:30  INFO 30884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-15T20:29:36.807+05:30  INFO 30884 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6f68756d
+2025-12-15T20:29:36.817+05:30  INFO 30884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-15T20:29:36.963+05:30  WARN 30884 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-15T20:29:37.050+05:30  INFO 30884 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.11
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-15T20:29:43.029+05:30  INFO 30884 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-15T20:29:43.494+05:30  INFO 30884 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15T20:29:55.300+05:30  WARN 30884 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-12-15T20:29:55.338+05:30  INFO 30884 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15T20:29:55.346+05:30  INFO 30884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-15T20:29:55.384+05:30  INFO 30884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-15T20:29:55.464+05:30  INFO 30884 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-15T20:29:55.568+05:30 ERROR 30884 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-12-15T20:31:59.489+05:30 DEBUG 20444 --- [SpringApplicationShutdownHook] o.s.d.r.l.RedisMessageListenerContainer  : Stopped RedisMessageListenerContainer
+2025-12-15T20:31:59.545+05:30  INFO 20444 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-15T20:31:59.628+05:30  INFO 20444 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-15T20:31:59.868+05:30  INFO 20444 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15T20:31:59.913+05:30  INFO 20444 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-15T20:32:00.021+05:30  INFO 20444 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
