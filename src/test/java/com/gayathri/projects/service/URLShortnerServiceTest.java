@@ -54,7 +54,8 @@ class URLShortnerServiceTest {
         /*By the following lines we tell mockito When the service calls its dependencies, don’t execute real logic.
 Instead, return exactly what I decide. */
 
-        when(urlGenerator.shorten()).thenReturn("abc123");
+        when(urlGenerator.shorten("https://google.com"))
+                .thenReturn("abc123");
         when(urlShortnerRepo.existsByShorturl("abc123")).thenReturn(false);
         when(urlShortnerRepo.save(any(URLShortner.class)))
                 .thenAnswer(invocation -> invocation.getArgument(0));

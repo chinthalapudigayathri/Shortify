@@ -1,7 +1,8 @@
 package com.gayathri.projects.util;
 
-import lombok.Setter;
+
 import org.springframework.stereotype.Component;
+
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -9,13 +10,15 @@ import java.net.URL;
 @Component
 public class URLGenerator
 {
-    @Setter
- private  String longUrl;
 
-public String shorten()
 
+public String shorten(String longUrl)
 
 {
+
+    if (longUrl == null || longUrl.isBlank()) {
+        throw new IllegalArgumentException("Invalid URL format");
+    }
     try{
         URL url=new URL(longUrl);
         //checking if the url has http/https if not we will throw an error to avoid having invalid urls
