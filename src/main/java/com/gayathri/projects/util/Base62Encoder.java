@@ -2,6 +2,7 @@ package com.gayathri.projects.util;
 
 import org.springframework.stereotype.Component;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 /* We will annotate the class with @component to tell Spring that it should consider this class as a bean
@@ -23,7 +24,7 @@ public class Base62Encoder {
     //defining captcha's length to be 6
     private static final int Captcha = 6;
     //Random() is a built in java util class which for generating random  pesudonumbers which means we can use random() to generate different captcha
-    private static final Random random= new Random();
+    private static final SecureRandom random = new SecureRandom();
 
     /* Declare public method so that we can use this method for shortening of the url
     * return is String which means it gives us captcha as return
@@ -31,7 +32,7 @@ public class Base62Encoder {
     public String encode()
     {
         //We use a built-in java StringBuilder Class which is mutable which means modification is allowed on the same object directly instead of creating a new object everytime while we do with String
-        StringBuilder encoded = new StringBuilder();
+        StringBuilder encoded = new StringBuilder(Captcha);
         for(int i=0;i<=Captcha;i++)
         {
         //nextInt is a method in Random() class which gives random number/alphabets from 0 to given Z
