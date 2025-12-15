@@ -1,6 +1,7 @@
 package com.gayathri.projects.controller;
 
 import com.gayathri.projects.service.CaptchaService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ public class CaptchaController {
     }
 
     @GetMapping
-    public ResponseEntity<String> getCaptcha() {
-        return ResponseEntity.ok(captchaService.createCaptcha());
+    public ResponseEntity<String> getCaptcha(HttpSession session) {
+        return ResponseEntity.ok(captchaService.createCaptcha((session)));
     }
 }

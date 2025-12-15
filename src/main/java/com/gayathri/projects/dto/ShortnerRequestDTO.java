@@ -22,4 +22,5 @@ in data
  */
     @NotBlank(message="url is still required")
     private String originalurl;
+    private String captcha;
 }

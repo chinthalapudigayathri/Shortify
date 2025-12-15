@@ -4,8 +4,10 @@ import com.gayathri.projects.dto.ShortnerRequestDTO;
 import com.gayathri.projects.dto.ShortnerResponseDTO;
 import com.gayathri.projects.exception.ErrorMessages;
 import com.gayathri.projects.exception.InvalidUrlFormatException;
+import com.gayathri.projects.service.CaptchaService;
 import com.gayathri.projects.service.URLShortnerService;
 import com.gayathri.projects.util.URLValidator;
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -24,32 +26,49 @@ public class URLController {
      */
     private static final Logger logger = LogManager.getLogger(URLController.class);
 
+    private String originalurl;
+    private String captcha;
+
 
 
 
     @Autowired
     private URLShortnerService urlservice;
 
+    @Autowired
+    private CaptchaService captchaService;
+
+
 
 
     /* ResponseEntity is a spring wrapper HTTP response, we are sending data from ShortnerResponseDTO as a response here
-    *  entire ResponseEntity<ShortnerResponseDTO> is actually a return type which means this method returns ResposneDTO
-    * shortenurl is the method name
-    * @RequestBody binds the entered input in json to ShortnerRequestDTO
-    * and @Valid validated if the entered fields are valid according to ShortnerRequestDTO fields
+     *  entire ResponseEntity<ShortnerResponseDTO> is actually a return type which means this method returns ResposneDTO
+     * shortenurl is the method name
+     * @RequestBody binds the entered input in json to ShortnerRequestDTO
+     * and @Valid validated if the entered fields are valid according to ShortnerRequestDTO fields
      */
     @PostMapping("/shorten")
-    public ResponseEntity<ShortnerResponseDTO> shortenurl(@Valid @RequestBody ShortnerRequestDTO shortnerRequestDto)
+    public ResponseEntity<ShortnerResponseDTO> shortenurl(@Valid @RequestBody ShortnerRequestDTO shortnerRequestDto, HttpSession session)
     {
-    logger.info("Recieved request to shorten url:", shortnerRequestDto.getOriginalurl());
+        logger.info("Recieved request to shorten url:", shortnerRequestDto.getOriginalurl());
 
-    //Verifying if the request is valid or not
+        //  Validate captcha FIRST
+        boolean isValidCaptcha =
+                captchaService.validateCaptcha(shortnerRequestDto.getCaptcha(), session);
+
+        if (!isValidCaptcha) {
+            return ResponseEntity
+                    .badRequest()
+                    .body(null);
+        }
+
+        //Verifying if the request is valid or not
         if(!URLValidator.isValid(shortnerRequestDto.getOriginalurl()))
         {
             throw new InvalidUrlFormatException(ErrorMessages.URL_FORMAT_INVALID);
 
         }
-       //if it is  valid we assign shortneded url and then return it as response
+        //if it is  valid we assign shortneded url and then return it as response
         ShortnerResponseDTO shortnerResponseDto = urlservice.URLShortner(shortnerRequestDto);
         logger.info("shortned url is ", shortnerResponseDto.getShortUrl());
 
@@ -57,9 +76,9 @@ public class URLController {
         return ResponseEntity.ok(shortnerResponseDto);
 
     }
-/* @GetMapping gets the required details , in our case original url
-* @PathVariable just takes the string from given url and then matches with the shorturl
- */
+    /* @GetMapping gets the required details , in our case original url
+     * @PathVariable just takes the string from given url and then matches with the shorturl
+     */
     @GetMapping("/{shorturl}")
     public ResponseEntity<Void> getOriginalURL(@PathVariable String shorturl)
     {
@@ -68,11 +87,17 @@ public class URLController {
         HttpHeaders headers = new HttpHeaders();
         headers.add("location", originalurl);
         /*HTTP status code 302 (Found) means the resource you requested has been
-        *temporarily moved to another URL. The server tells the client where to go next using
-        *
+         *temporarily moved to another URL. The server tells the client where to go next using
+         *
          */
-return ResponseEntity.status(302).headers(headers).build();
+        return ResponseEntity.status(302).headers(headers).build();
     }
 
+    //To display it at front end
+    @GetMapping("/{shorturl}/details")
+    public ResponseEntity<String> getOriginalURLForUI(@PathVariable String shorturl) {
+        String originalurl = urlservice.getOriginalURL(shorturl);
+        return ResponseEntity.ok(originalurl);
+    }
 
 }
