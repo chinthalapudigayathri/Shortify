@@ -5,7 +5,6 @@ import com.gayathri.projects.dto.ShortnerResponseDTO;
 import com.gayathri.projects.exception.ErrorMessages;
 import com.gayathri.projects.exception.InvalidUrlFormatException;
 import com.gayathri.projects.service.URLShortnerService;
-import com.gayathri.projects.util.URLGenerator;
 import com.gayathri.projects.util.URLValidator;
 import jakarta.validation.Valid;
 import org.apache.logging.log4j.Logger;
@@ -13,7 +12,6 @@ import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -49,10 +47,12 @@ public class URLController {
         if(!URLValidator.isValid(shortnerRequestDto.getOriginalurl()))
         {
             throw new InvalidUrlFormatException(ErrorMessages.URL_FORMAT_INVALID);
+
         }
        //if it is  valid we assign shortneded url and then return it as response
         ShortnerResponseDTO shortnerResponseDto = urlservice.URLShortner(shortnerRequestDto);
         logger.info("shortned url is ", shortnerResponseDto.getShortUrl());
+
 
         return ResponseEntity.ok(shortnerResponseDto);
 

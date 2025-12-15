@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
     <Appenders>
-        <!-- Console output -->
-        <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
-        </Console>
-
-        <!-- Rolling file output -->
-        <RollingFile name="FileLogger" fileName="logs/shortify.log"
+        <RollingFile name="FileLogger"
+                     fileName="logs/shortify.log"
                      filePattern="logs/shortify-%d{yyyy-MM-dd}.log.gz">
-            <PatternLayout>
-                <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</Pattern>
-            </PatternLayout>
+            <JsonLayout complete="true" compact="true" eventEol="true" stacktraceAsString="true"/>
             <Policies>
                 <TimeBasedTriggeringPolicy />
                 <SizeBasedTriggeringPolicy size="10 MB"/>
             </Policies>
         </RollingFile>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <JsonLayout complete="false" compact="true" eventEol="true"/>
+        </Console>
+<!--kafka
+        <Kafka name="KafkaAppender" topic="service-logs">
+            <Property name="bootstrap.servers">localhost:9092</Property>
+            <JsonLayout compact="true" eventEol="true"/>
+        </Kafka>
+-->
     </Appenders>
 
     <Loggers>
@@ -25,7 +28,11 @@
             <AppenderRef ref="Console"/>
             <AppenderRef ref="FileLogger"/>
         </Logger>
-
+        <!--Kafka
+        <Root level="info">
+            <AppenderRef ref="KafkaAppender"/>
+        </Root>
+-->
         <!-- Root logger -->
         <Root level="INFO">
             <AppenderRef ref="Console"/>

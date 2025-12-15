@@ -2,6 +2,7 @@ package com.gayathri.projects.dto;
 
 
 import jakarta.validation.constraints.NotBlank;
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 
@@ -13,6 +14,7 @@ import lombok.Getter;
 It does not contain logic
  */
 @Getter
+@Builder
 public class ShortnerRequestDTO{
 
 /* @NotBlank is a Jakarta Bean Validation annotation which can send a message when a user passes null

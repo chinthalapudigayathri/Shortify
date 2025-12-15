@@ -26,3 +26,6 @@ Inspired by: https://github.com/prashanthm07/url-shortner-java-springboot-postgr
 24. @Cacheable tells spring that result of this method call should be cached
 25. A custom Exception class always extends RuntimeException class 
 26. Your repository method names must match the Java field names in the entity
+27. Add docker compose file to configure elastic search kibana logging
+28. After adding configurations run this in terminal" docker compose up -d
+29. After that verify in http://localhost:9200  should show Elasticsearch info and verify http://localhost:5601 it should show kibana ui
